@@ -1,0 +1,33 @@
+---
+# tasks file for firefox
+
+- name: Lets' update the scap content first make sure you can pull updates.
+  dnf:
+   name: scap-security-guide
+   state: latest
+
+- name: detectiing which systems have firefox installed.
+  package_facts: 
+    manager: auto
+- debug:
+    msg: Firefox is installed <---------------------- on this host
+  when: "'firefox' in ansible_facts.packages"
+- debug:
+    msg: Firefox in NOT installed <------------------ on this host
+  when: "'firefox' not in ansible_facts.packages"
+
+- name: scanning systems with firefox installed , skipping those without
+  command: oscap xccdf eval --profile "{{fox}}" --report "{{html}}" --stig-view "{{view}}" "{{firef}}"
+  when: "'firefox' in ansible_facts.packages"
+  register: command_result
+  failed_when: "'FAILED' in command_result.stderr"
+
+- name: downloading reports to ../oscap-reports directory
+  fetch:
+    src: "{{item.src}}"
+    dest: "{{item.dest}}"
+    flat: yes
+  with_items:
+    - {src: "{{html}}", dest: "../oscap-reports/firefox-{{inventory_hostname}}.html" }     
+    - {src: "{{view}}", dest: "../oscap-reports/firefox-{{inventory_hostname}}.xml" }
+  when: "'firefox' in ansible_facts.packages"     

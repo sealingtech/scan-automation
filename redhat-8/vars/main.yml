@@ -1,0 +1,18 @@
+---
+# vars file for redhat-8
+#
+#profile
+#
+cli: stig
+gui: stig_gui
+
+#ssg path
+#
+rhel7: /usr/share/xml/scap/ssg/content/ssg-rhel7-ds-1.2.xml
+rhel8: /usr/share/xml/scap/ssg/content/ssg-rhel8-ds-1.2.xml
+firef: /usr/share/xml/scap/ssg/content/ssg-firefox-ds-1.2.xml
+
+#remote_report_paths
+#
+html: /tmp/oscap-reports.html
+view: /tmp/oscap-reports.xml
