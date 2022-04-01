@@ -1,0 +1,16 @@
+---
+# vars file for redhat-7
+#
+#profile
+#
+cli: xccdf_org.ssgproject.content_profile_stig
+gui: xccdf_org.ssgproject.content_profile_stig_gui
+
+#ssg path
+#
+rhel7: /usr/share/xml/scap/ssg/content/ssg-rhel7-ds-1.2.xml
+
+#remote_report_paths
+#
+html: /tmp/oscap-reports.html
+view: /tmp/oscap-reports.xml

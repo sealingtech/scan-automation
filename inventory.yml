@@ -17,5 +17,11 @@ all:
           hosts:
             10.13.10.115:
 
+    set4:
+      children:
+        DISA4:
+          hosts:
+            10.13.10.127:
+
 #ansible_user: admin
 #ansible_ssh_pass: admin
