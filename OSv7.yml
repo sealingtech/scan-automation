@@ -1,0 +1,5 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - { role: /home/admin/RMF/OpenSCAP/OSv7, when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == "7"}
