@@ -5,9 +5,11 @@ Consists of 3 main ansible roles
 OSv7:
   - Scans RHEL7, CENTOS7, ROCKY7 Operating Systems
   - Determines if the Operating System is a Graphical or CLI and applies the correct profile 
+
 OSv8:  
   - Scans RHEL8, CENTOS8, ROCKY8 Operating Systems
   - Determines if the Operating System is a Graphical or CLI and applies the correct profile 
+
 mozilla:
   - Tested on RHEL CENTOS ROCKY instances  
   - Looks for a Mozilla FireFox instance if found it will conduct a Scan.
