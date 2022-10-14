@@ -35,11 +35,15 @@ How to use:
 
 notes: 
     - The playbook starts with updating "scap-security-guide" using yum.
+    
     - Adjust the playbooks with the correct path to the roles is cloning on another instance
+    
     - Ensure ssh keys are shared to correct hosts defined in the inventory file.
 
 To Do's:
-    - implement tags for bypass the yum update scap-security-guide if needed
+    - implement tags for bypass the yum update scap-security-guide if needed.
+    
     - streamline vars and incorperate host/group vars for better structure.
+    
     - import rmf baseline files (playbook) to stig and scan all at once. 
    
