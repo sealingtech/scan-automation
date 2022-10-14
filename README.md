@@ -2,18 +2,18 @@
 
 Consists of 3 main ansible roles
 
-OSv7
+OSv7:
   - Scans RHEL7, CENTOS7, ROCKY7 Operating Systems
   - Determines if the Operating System is a Graphical or CLI and applies the correct profile 
-OSv8  
+OSv8:  
   - Scans RHEL8, CENTOS8, ROCKY8 Operating Systems
   - Determines if the Operating System is a Graphical or CLI and applies the correct profile 
-mozilla
+mozilla:
   - Tested on RHEL CENTOS ROCKY instances  
   - Looks for a Mozilla FireFox instance if found it will conduct a Scan.
 
 
-Inventory consist of 3 projects namespaces to incorperate continous compliance and RMF development. ( use or create inventory to match your use case )
+Inventory: consist of 3 projects namespaces to incorperate continous compliance and RMF development. ( use or create inventory to match your use case )
   - GDPv3
   - DCWS
   - DDSMv2
